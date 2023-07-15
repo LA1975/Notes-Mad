@@ -18,14 +18,14 @@ Miro planning board:
 https://miro.com/app/board/uXjVOCA1ImY=/
 
 ### Tech Stack:
-    HTML
-    CSS
-    javascipt
-    node.js
-    express
-    handlebars
-    sqlite3
-
+ HTML
+ CSS3
+ javascipt
+ node.js
+ express
+ handlebars
+ sqlite3
+ 
 ### Future ideas:
 - add pomodoro timer for tasks export data for productivity tracking
 - incorporate into Kandban board style  
@@ -76,10 +76,11 @@ Make sure you have the following software installed on your system:
 - uuid (^9.0.0)
 
 1. Start the Application:
+   ```
    npm start
    ```
 
-2. Access the Application:
+3. Access the Application:
    Open your web browser and visit [http://localhost:3000](http://localhost:3000) to access the notes-mad application.
 
 
