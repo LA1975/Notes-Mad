@@ -6,7 +6,7 @@ I am wanting to transition from teaching to software development.  Upon completi
 I love stationary and to-do lists and post-it notes
 
 
- (I know fun?!?) so when I saw a tutorial on YouTube by codefoxx https://youtu.be/_B-54mvPup4  https://github.com/iamcodefoxx  I couldn't resist.
+ (I know fun?!?) so when I saw a tutorial on YouTube by codefoxx https://youtu.be/_B-54mvPup4  https://github.com/miguelznunez/Sticky-Notes  I couldn't resist.
 
 This tutorial is just for a simple front-end app and I enjoyed it, however, I soon started to make a list in my head of all the changes and extra features I would like to have in it.
 
