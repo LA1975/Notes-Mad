@@ -75,13 +75,16 @@ Make sure you have the following software installed on your system:
 - sqlite3 (^5.1.6)
 - uuid (^9.0.0)
 
-1. Start the Application:
+5. Start the Application:
    ```
    npm start
    ```
-
-3. Access the Application:
+Access the Application:
    Open your web browser and visit [http://localhost:3000](http://localhost:3000) to access the notes-mad application.
+
+    adminuser@test.com
+    Password1!
+
 
 
 
