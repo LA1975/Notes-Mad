@@ -1,4 +1,4 @@
-# Notes Mad  = a Post It Notes style todo app
+# Notes Mad  - a Post It Notes style todo app
 
 ## Introduction - why this project
 I am wanting to transition from teaching to software development.  Upon completion of PGCert (Information Technology) and I wanted a fullstack project to practice and embedd my newly acquired skills but extend them further to encourage skill growth.
@@ -12,8 +12,10 @@ This tutorial is just for a simple front-end app and I enjoyed it, however, I so
 
 So I decided to create an backend and see how many features I could add.
 
-Trello board here:
+Trello board:
 https://trello.com/invite/b/pK1NFTcX/7188f18abbaa688646b2421f6e3bfe42/post-it-notes-style-todo-app
+Miro planning board:
+https://miro.com/app/board/uXjVOCA1ImY=/
 
 Tech Stack:
 HTML
