@@ -1,0 +1,210 @@
+/* login modal popup*/
+.pop-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 30px;
+  }
+  
+  .form{
+    position:absolute;
+    background: white;
+    border-radius: 3px;
+    max-width: 430px;
+    width:100%;
+    padding:30px;
+  
+  }
+  #modalLogin{
+    display: none;
+  }
+  .form.signup{
+    opacity:0;
+    pointer-events: none;
+  }
+  .forms.show-signup .form.signup{
+    opacity:1;
+    pointer-events:auto;
+  }
+  
+  .forms.show-signup .form.login{
+    opacity:0;
+    pointer-events:none;
+  }
+  
+  header h2{
+    font-size: 28px;
+    font-weight: 600;
+    color: #673dff;
+    text-align: center;
+  
+  }
+  form{
+    margin-top:30px;
+  }
+  
+  .userInfo,form .textInput{
+    position: relative;
+    width: 100%;
+    height:50px;
+    margin-top:20px;
+    border-radius: 3px;
+  }
+  
+  .userInfo p,.textInput input, 
+  .textInput button{
+    height: 100%;
+    border:none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 3px;
+    width:100%;
+  }
+  #profileUpdate,#profileUpdateCancel, #btn-confirm, #btn-close,#btn-editProfile, #btn-delete{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    align-items: center;
+    
+  }
+  #btn-update, #editProfile, #confirmDelete{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+  
+  input[type="date"]::before { 
+    content: attr(data-placeholder);
+    width: 100%;
+    color: gray;
+  }
+  
+  /* hide our custom/fake placeholder text when in focus to show the default
+   * 'mm/dd/yyyy' value and when valid to show the users' date of birth value.
+   */
+  input[type="date"]:focus::before,
+  input[type="date"]:valid::before { display: none }
+
+  .textInput input {
+    outline: none;
+    padding: 0 15px;
+    border: 1px solid lightgray;
+  }
+  
+  ::-ms-reveal {
+    display: none;
+  }
+  .textInput input:focus{
+    border-bottom-width:2px;
+  }
+  .la-eye-slash, .la-eye{
+    position:absolute;
+    top:50%;
+    right:10px;
+    transform: translateY(-50%) ;
+    font-size: 24px;
+    color: grey;
+    cursor: pointer;
+    padding: 5px;;
+  }
+  .textInput button{
+    color: white;
+    background-color: #673dff;
+    transition: all 0.3s ease;
+    cursor:pointer;
+    font-family: 'Architects Daughter', cursive;
+  }
+  .textInput button:hover{
+    color: white;
+    background-color: #8e70f8;
+  }
+  .form-link{
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .form-link span, 
+  .form-link span a{
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .form a{
+      text-decoration: none;
+      transition: all 0.3s ease;
+  }
+  
+/* Profile and Admin Page Container and Tables */
+.editProfile, #deleteConfirm{
+  display: none;
+  z-index: 3;
+}
+#profile-table{
+  min-width: 650px;
+}
+#user-information{
+  padding: 30px 80px;
+}
+ 
+.profile-container, .admin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  
+  
+}
+.adminTable{
+  position:absolute;
+  background: white;
+  border-radius: 3px;
+  padding:30px;
+}
+.admin-container h1{
+  text-align: center;
+}
+
+#notes{
+  padding-top: 20px;
+}
+th{
+text-align: center;
+vertical-align: center;
+padding: 5px;
+}
+td{
+  padding: 5px;
+  word-break: break-word
+}
+.delButton{
+ text-align: center;
+ padding-bottom: 20px;
+ 
+}
+.delButton .la-trash {
+  padding: 5px;
+}
+#isAdmin{
+  text-align: center;
+
+}
+#btn-admin {
+  padding: 10px;
+}
+table{
+  padding-top: 10px;
+}  
+
+tr:first-child {
+  background-color: lightgray;
+}
+tr:nth-child(odd) {
+  background-color: lightgray;
+}
+
+
+  

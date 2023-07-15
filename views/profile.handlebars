@@ -1,0 +1,122 @@
+{{! Display a message if one was provided. }}
+
+
+<section class="profile-container ">
+    <div class="form" id="profile-table">
+
+        {{!user information}}
+        <div id="user-information">
+            <h2 class="userInfo">Personal Information</h2>
+            <p class="userInfo"><b>Username:</b> {{user.user_name}}</p>
+            <p class="userInfo"><b>Name:</b> {{user.first_name}} {{user.last_name}}</p>
+            <p class="userInfo"><b>Email:</b> {{user.email}}</p>
+            <p class="userInfo"><b>Date of Birth:</b> {{user.date_of_birth}}</p>
+            <form action="">
+                <div class="textInput" id="editProfile">
+                    <button class="button" id="btn-editProfile">Edit Profile</button>
+                    <button class="button" id="btn-delete">Delete User</button>
+                </div>
+            </form>
+            {{#if toastMessage}}
+<p class="toast">{{toastMessage}}</p>
+{{/if}}
+        </div>
+{{!List of notes written by the user with the abiity to delete}}
+        
+            <div id="notes">
+                <h1>My Notes</h1>
+                {{#if myNotes}}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Note</th>
+                            <th>Date Created</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each myNotes}}
+                        <tr>
+                            <td class="list">{{text}}</td>
+                            <td class="list">{{date_created}}</td>
+                            <td class="delButton">
+                               <form action="/deleteNote" method="POST">
+        <input type="hidden" name="note_id" value="{{note_id}}">
+        <button class="button" type="submit" title="Delete"><i class="las la-trash"></i></button>
+      </form>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                    
+                </table>
+                {{else}}
+                <h3>There are no published notes.</h3>
+                {{/if}}
+
+            </div>
+   </section>     
+<!-- modals-->
+<section class="pop-container forms">
+    <!-- The delete confirmation modal-->
+    <div id="deleteConfirm" class="form modal">
+        <div class="modal-warning">
+            
+            <h2>Delete your account?</h2>
+            <p>Your notes will be deleted too.</p>
+            <form id="delUser" action="/deleteUser" method="POST">
+                <div class="textInput" id="confirmDelete">
+                    <button class="button" type="submit" id="btn-confirm">Yes</button>
+                    <button class="button" role="button" id="btn-close">Cancel</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+    <!-- The Edit-Profile Modal -->
+    <div class="form editProfile modal">
+        <div class="form-content">
+            <h2>Edit Profile</h2>
+            <form action="/updateProfile" method="POST">
+                <div class="field textInput">
+                    <input type="password" placeholder="Password" name="password" class="password" required>
+                </div>
+                <div class="field textInput">
+                    <input type="password" placeholder="Re-enter Password" name="rePassword" class="password" required>
+                    <i class="las la-eye-slash"></i>
+                </div>
+
+                <div class="field textInput">
+                    <input type="email" placeholder="Email" name="email" class="input">
+                </div>
+                <div class="field textInput">
+
+                    <input type="text" class="input" placeholder="First Name" name="first_name" id="txtfName" />
+                </div>
+
+                <div class="field textInput">
+
+                    <input type="text" class="input" placeholder="Last Name" name="last_name" id="txtlName" />
+                </div>
+               
+                <div class="field textInput">
+
+                    <input type="date" class="input" name="date_of_birth" id="DateOfBirth" min="1900-01-01"
+                        placeholder="Date Of Birth" data-placeholder="Date of Birth" aria-required="true">
+                </div>
+                <div class=" field textInput " id="btn-update" type="submit">
+                    <button id="profileUpdate">Update Account</button>
+                    <button id="profileUpdateCancel">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    </section>
+
+    
+
+
+

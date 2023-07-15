@@ -1,0 +1,56 @@
+{{! Display a message if one was provided. }}
+
+
+<div class="admin-container">
+    <div class="adminTable">
+  <h1>Administration Page</h1>
+
+  <br />
+  <h2>All Users</h2>
+  <table class="table">
+
+
+    <tr>
+      <th>Delete</th>
+      <th>Username</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>DOB</th>
+      <th>Email</th>
+      <th>Admin</th>
+    </tr>
+
+    {{#if allUsers}}
+    {{#each allUsers}}
+    <tr id="{{allUsers}}">
+      <td class="delButton">
+        <form id="delUser" action="/deleteUser" method="POST">
+        <input type="hidden" name="user_name" value="{{user_name}}">
+          <button class="button" type="submit" title="Delete"><i class="las la-trash"></i></button>
+          </form>
+      </td>
+
+      <td>{{user_name}}</td>
+      <td>{{{first_name}}}</td>
+      <td>{{last_name}}</td>
+      <td>{{date_of_birth}}</td>
+      <td>{{email}}</td>
+      <td id="isAdmin">{{#if is_admin}}Y
+        {{else}}
+        <form id="delUser" action="/makeAdmin" method="POST">
+        <input type="hidden" name="user_name" value="{{user_name}}">
+          <button id="btn-admin" type="submit" title="Make Admin"><i class="las la-plus"></i>Make Admin</button>
+          </form>
+        {{/if}}</td>
+
+    </tr>
+
+    {{/each}}
+    {{/if}}
+{{#if toastMessage}}
+<p class="toast">{{toastMessage}}</p>
+{{/if}}
+  </table>
+  <br />
+</div>
+</div>

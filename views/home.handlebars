@@ -1,0 +1,172 @@
+<div id="header">
+  <img src="/images/notes.png" alt="image of stick note">
+  <h1> Note Mad</h1>
+  {{#if login}}
+  <p id="add_note"> <i class="las la-plus-square"></i>New Note</p>
+  {{else}}
+  <p id="loginButton"></a><i class="las la-sign-in-alt"></i>Login</p>
+  {{/if}}
+{{#if toastMessage}}
+<p class="toast">{{toastMessage}}</p>
+{{/if}}
+</div>
+
+
+
+{{!login modal}}
+<div id="modalLogin" class="modal">
+  <section class="pop-container forms">
+    <div class="form login">
+      <div class="form-content">
+        <h2>Login</h2>
+        <form action="/login" method="POST">
+          <div class="field textInput">
+
+            <input type="email" placeholder="Email" name="email" class="input" required>
+          </div>
+
+          <div class="field textInput">
+
+            <input type="password" placeholder="Password" name="password" class="password" required>
+            <i class="las la-eye-slash"></i>
+          </div>
+          {{!-- <div class="form-link">
+            <a href="#" class="forgot-password">Forgot Password</a>
+          </div> --}}
+
+          <div class=" field textInput button" type="submit">
+            <button>Login</button>
+          </div>
+        </form>
+
+        <div class="form-link">
+          <span>Don't have an account? <a href="#" class="link signup-link">Create one here.</a></span>
+        </div>
+      </div>
+    </div>
+    {{!-- Signup form --}}
+    <div class="form signup">
+      <div class="form-content">
+        <h2>Signup</h2>
+        <form action="/newAccount" method="POST">
+          <div class="field textInput">
+            <input type="email" placeholder="Email" name="email" class="input" required>
+          </div>
+          <div class="field textInput">
+
+            <input type="text" class="input" placeholder="First Name" name="first_name" id="txtfName" required />
+          </div>
+
+          <div class="field textInput">
+
+            <input type="text" class="input" placeholder="Last Name" name="last_name" id="txtlName" required />
+          </div>
+          <div class="field textInput">
+
+            <input type="text" class="input" placeholder="Username" name="user_name" id="userName" required />
+          </div>
+          <div class="field textInput">
+
+            <input type="date" class="input" name="date_of_birth" id="DateOfBirth" min="1900-01-01"
+              placeholder="Date Of Birth" data-placeholder="Date of birth" required aria-required="true">
+          </div>
+
+          <div class="field textInput">
+            <input type="password" placeholder="Password" name="password" class="password" required>
+          </div>
+          <div class="field textInput">
+
+            <input type="password" placeholder="Password" name="rePassword" class="password" required>
+            <i class="las la-eye-slash"></i>
+          </div>
+
+          <div class=" field textInput button" type="submit">
+            <button>Signup</button>
+          </div>
+
+
+        </form>
+        <div class="form-link">
+          <span>Already have an account? <a href="#" class="link login-link">Login here.</a></span>
+        </div>
+      </div>
+
+
+    </div>
+
+  </section>
+</div>
+{{!-- create note modal --}}
+<section>
+  <div id="modal">
+    <form id="newNote" action="/newNote" method="POST" >
+    <div id="inner_modal">
+      <textarea placeholder="Note..." id="user_input" name="text" maxlength="160" maxwidth="160"></textarea>
+
+    </div>
+    <div id="modal_icons">
+      <i class="las la-times-circle" id="hide"></i>
+      <button  class="newNote-button" type="submit" title="create new note">
+      <i class="las la-check-circle" id="tick"></i>
+      </button>
+    </div>
+    </form>
+  </div>
+
+  {{!-- edit note modal --}}
+  <section>
+  <div id="editModal">
+    <form id="editNote" action="/edit" method="POST" >
+    <div id="innerEditModal">
+      <textarea placeholder="Note..." id="note_input" name="text" maxlength="160" maxwidth="160"></textarea>
+
+    </div>
+    <div id="edit_icons">
+      <i class="las la-times-circle" id="edit-hide"></i>
+      <button  class="newNote-button" type="submit" title="create edited note">
+      <i class="las la-check-circle" id="tick"></i>
+      </button>
+    </div>
+    <input type="hidden" id="noteIdInput" name="note_id" value="">
+    </form>
+  </div>
+
+</section>
+
+</section>
+{{!-- displaying all notes of the user on login --}}
+<section>
+  <div class="container">
+    
+    <div id="allNotes">
+      {{#if login}}
+      {{#if myNotes}}
+      
+
+      {{#each myNotes}}
+      <div class="note">
+        
+        <div class="details">
+          <p>{{text}}</p>
+        </div>
+        <div class="icons">
+          <form action="/deleteNote" method="POST">
+                  <button class="delete-button" type="submit" title="delete note button">
+                    <i class="las la-trash"></i>
+                  </button>
+                  <input type="hidden" name="note_id" value="{{note_id}}">
+                </form>
+          <i class="las la-edit"></i>
+
+        </div>
+        
+      </div>
+      {{/each}}
+
+      {{else}}
+      <h3>There are no published notes.</h3>
+      {{/if}}
+      {{/if}}
+
+    </div>
+</section>

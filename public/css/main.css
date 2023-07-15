@@ -1,0 +1,312 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Comic Neue', cursive;
+}
+
+body {
+  position: relative;
+  background-image: url("/images/hd-wallpaper-cork.jpg");
+
+}
+
+#header p {
+  display: flex;
+  outline: none;
+  font-family: inherit;
+  align-items: center;
+  justify-items: center;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+
+}
+
+#header .las {
+  color: #673dff;
+  font-size: 48px;
+}
+
+.la-sign-in-alt {
+  cursor: pointer;
+}
+
+#header {
+  padding: 20px;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.la-plus-square:hover {
+  color: lightgrey;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  color: #673dff;
+  justify-content: flex-start;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.1);
+
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  margin: 0;
+  padding: 18px;
+}
+
+
+li {
+  width: 200px;
+  ;
+  max-width: 200px;
+  padding: 10px;
+}
+
+a {
+  color: #673dff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #8e70f8;
+}
+
+.hamburger {
+  display: none;
+}
+.toast{
+  background-color: white;
+    border-radius: 3px;
+    width: auto;
+    padding: 10px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+@media(max-width:768px) {
+  #header {
+    padding: 20px;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: block;
+    border: 0;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    padding: 20px;
+    z-index: 100;
+  }
+
+  .hamburger:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+
+  #hamburger-container {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    right: 20px;
+  }
+
+  #hamburger-container>div {
+    width: 30px;
+    border-radius: 3px;
+    height: 3px;
+    position: absolute;
+    background: #673dff;
+  }
+
+  #hamburger-container>div:nth-child(2) {
+    top: 8px;
+  }
+
+  #hamburger-container>div:last-child {
+    bottom: 0px;
+  }
+
+  .bar {
+    transition: all 0.4s ease-in-out;
+  }
+
+
+  ul {
+    display: none;
+    position: relative;
+  }
+
+  ul.show {
+    display: block;
+    background-color: transparent;
+    line-height: 2rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+
+
+}
+
+/* notes */
+#allNotes {
+  display: flex;
+  justify-content: space-evenly;
+
+  flex-wrap: wrap;
+  padding-top: 10px;
+}
+
+.note {
+  display: flex;
+  width: 350px;
+  height: 350px;
+
+  transition: 2s;
+  cursor: pointer;
+  overflow-wrap: break-word;
+  box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.75);
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+
+
+.details {
+  display: block;
+  margin-top: 25px;
+  padding: 0 30px;
+  font-size: 1.5rem;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+
+
+.icons i {
+
+  font-size: 24px;
+  color: gray;
+  cursor: pointer;
+
+  transition: 0.3s ease-in-out;
+}
+
+.la-edit {
+  padding: 10px;
+}
+
+.la-trash {
+  padding-right: 10px;
+}
+
+
+.details i:hover,
+.icons i:hover {
+  color: lightgray;
+}
+
+.delete-button,
+.newNote-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+
+.delete-button:focus,
+.newNote-button:focus {
+  outline: none;
+}
+
+
+/* create note modal */
+#newNote,
+#editNote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#modal,
+#editModal {
+  display: none;
+  position: relative;
+  z-index: 1;
+  margin: auto;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#inner_modal,
+#innerEditModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+
+#inner_modal textarea,
+#innerEditModal textarea {
+  width: 335px;
+  height: 335px;
+  padding: 25px;
+  outline: none;
+  resize: none;
+  font-size: 1.5rem;
+  font-family: inherit;
+  box-shadow: 0px 5px 15px 0px rgba(60, 60, 60, 0.9);
+}
+
+#modal_icons i,
+#edit_icons i {
+  position: relative;
+  z-index: 2;
+  font-size: 36px;
+  color: gray;
+  cursor: pointer;
+  top: -45px;
+  transition: 0.3s ease-in-out;
+}
+
+
+#modal_icons i:hover,
+#edit_icons i {
+  color: lightgray;
+}
+
+
+
+@media screen and (max-width:400px) {
+  .form {
+    padding: 15px 10px;
+  }
+}
