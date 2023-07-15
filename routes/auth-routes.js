@@ -28,7 +28,7 @@ router.post("/login", async function (req, res) {
 
     //fetch user from database
   const user = await usersDao.fetchUser(null, email);
-  console.log(user);
+  
   //check if the user exist in the database, if yes, match password then direct to aother page,
   //otherwise redirect to login
   if (user) {
@@ -57,7 +57,7 @@ router.post("/login", async function (req, res) {
   }
 });
 
-// Whenever we navigate to /logout, delete the authToken cookie.
+// on navigation to /logout, delete the authToken cookie.
 // redirect to "/", supplying a "logged out successfully" message.
 router.get("/logout", function (req, res) {
   res.clearCookie("authToken");
@@ -128,10 +128,6 @@ async function checkUserExists(username, email) {
   const checkUser = await usersDao.fetchUser(username, email);
   return checkUser !== undefined;
 }
-
-
-
-
 
 
 module.exports = router;
