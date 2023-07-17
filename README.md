@@ -13,7 +13,6 @@ This tutorial is just for a simple front-end app and I enjoyed it, however, I so
 So I decided to create an backend and see how many features I could add.
 <video controls>
   <source src="Demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
 </video>
 Trello board:
 https://trello.com/invite/b/pK1NFTcX/7188f18abbaa688646b2421f6e3bfe42/post-it-notes-style-todo-app
