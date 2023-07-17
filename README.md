@@ -11,7 +11,7 @@ I love stationary and to-do lists and post-it notes.
 This tutorial is just for a simple front-end app and I enjoyed it, however, I soon started to make a list in my head of all the changes and extra features I would like to have in it.
 
 So I decided to create an backend and see how many features I could add.
-<p align="center"><img src="Demo.gif" alt="video of Notes Mad demo" width="400"/></p>
+<p align="center"><img src="Demo.gif" alt="video of Notes Mad demo" width="600"/></p>
   
 Trello board:
 https://trello.com/invite/b/pK1NFTcX/7188f18abbaa688646b2421f6e3bfe42/post-it-notes-style-todo-app
