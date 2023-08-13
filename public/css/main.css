@@ -177,8 +177,8 @@ a:hover {
 
 .note {
   display: flex;
-  width: 350px;
-  height: 350px;
+  width: 310px;
+  height: 310px;
 
   transition: 2s;
   cursor: pointer;
