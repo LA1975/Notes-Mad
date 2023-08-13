@@ -45,5 +45,13 @@ router.get("/", loginAdminVerification,  async function (req, res) {
     }
     res.redirect("/");
   });
+  //router for displaying about page
+  router.get('/about',(req,res) =>{
+  res.locals.pageTitle = "About";
+
+
+    res.render("about");
+  });
+  
 
   module.exports = router;
