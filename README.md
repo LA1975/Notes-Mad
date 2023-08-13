@@ -8,13 +8,14 @@ I love all things stationary and to-do lists. So when I saw a tutorial on YouTub
 
 This tutorial is just for a simple front-end app and I enjoyed it, however, I soon started to make a list in my head of all the changes and extra features I would like to have in it.
 
-So I decided to see if I could turn it into a full stack app.
+So I decided to see if I could turn it into a full stack app. [View on replit](https://notes-mad.la1975.repl.co)
 <p align="center"><img src="Demo.gif" alt="video of Notes Mad demo" width="600"/></p>
   
 Trello board:
 https://trello.com/invite/b/pK1NFTcX/7188f18abbaa688646b2421f6e3bfe42/post-it-notes-style-todo-app
 Miro planning board:
 https://miro.com/app/board/uXjVOCA1ImY=/
+
 
 ### Tech Stack:
  HTML
