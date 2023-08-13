@@ -15,7 +15,7 @@ Trello board:
 https://trello.com/invite/b/pK1NFTcX/7188f18abbaa688646b2421f6e3bfe42/post-it-notes-style-todo-app
 Miro planning board:
 https://miro.com/app/board/uXjVOCA1ImY=/
-
+View on replit notes-mad.la1975.repl.co
 ### Tech Stack:
  HTML
  CSS3
