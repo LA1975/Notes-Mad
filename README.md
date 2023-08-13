@@ -1,16 +1,14 @@
 # Notes Mad  - a Post It Notes style todo app
 
 ## Introduction - why this project
-I am wanting to transition from teaching to software development.  Upon completion of PGCert (Information Technology) and I wanted a fullstack project to practice and embedd my newly acquired skills but extend them further to encourage skill growth.
+I am wanting to transition from teaching to software development.  Upon completion of PGCert (Information Technology), I found myself battling cancer and a rare autoimmune disease, dermatomyositis, which put my career change goals on hold.  Not wanting to give up on software development, I wanted a full-stack project to practice and embed my newly acquired skills but extend them further to encourage skill growth.
 Notes-Mad is a Node.js application with dependencies that enable the creation and management of notes.
 
-I love stationary and to-do lists and post-it notes.
-
- (I know fun?!?) so when I saw a tutorial on YouTube by codefoxx https://youtu.be/_B-54mvPup4  https://github.com/miguelznunez/Sticky-Notes  I couldn't resist.
+I love all things stationary and to-do lists. So when I saw a tutorial on YouTube by codefoxx https://youtu.be/_B-54mvPup4  https://github.com/miguelznunez/Sticky-Notes  I couldn't resist.
 
 This tutorial is just for a simple front-end app and I enjoyed it, however, I soon started to make a list in my head of all the changes and extra features I would like to have in it.
 
-So I decided to create an backend and see how many features I could add.
+So I decided to see if I could turn it into a full stack app.
 <p align="center"><img src="Demo.gif" alt="video of Notes Mad demo" width="600"/></p>
   
 Trello board:
@@ -29,12 +27,12 @@ https://miro.com/app/board/uXjVOCA1ImY=/
  
 ### Future ideas:
 - add pomodoro timer for tasks export data for productivity tracking
-- incorporate into Kandban board style  
+- incorporate into Kanban board style  
 - drag and drop functionality
-- ability to change note colour scheme
-- make paper look more curled
-- keep formating from note textarea
-- add labels for note criteria with ability to search/filter by label
+- the ability to change note colour scheme
+- make the paper look more curled
+- keep formatting from note textarea
+- add labels for note criteria with the ability to search/filter by label
 - add set due date feature
 
 ## Installation Instructions
